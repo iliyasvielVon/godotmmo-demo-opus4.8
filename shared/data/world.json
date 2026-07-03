@@ -1,0 +1,30 @@
+{
+	"_comment": "世界参数（单一数据源）。来源：client/scripts/Main.gd _setup_world/_spawn_monsters/_update_world_unlocks。MMO 中世界解锁为全局共享，由服务器推进。",
+	"map_radius": 155.0,
+	"initial_unlocked_radius": 58.0,
+	"player_spawn": [0, 0.05, 7.0],
+	"region_size": 64.0,
+
+	"unlock_stages": [
+		{"stage": 0, "radius": 58.0},
+		{"stage": 1, "radius": 96.0,  "kills": 4, "msg": "无缝大世界第一圈已解锁：湖区、遗迹和外野开放。"},
+		{"stage": 2, "radius": 128.0, "kills": 8, "msg": "西北赤色王座通路已解锁：可以挑战荣耀守门人。"},
+		{"stage": 3, "radius": 155.0, "boss_defeated": true, "msg": "全域大世界已解锁：边境封印解除。"}
+	],
+	"unlock_lerp_speed": 42.0,
+
+	"boss_spawn": {"kind": "boss", "pos": [-96, 0.3, -94]},
+	"spawners": [
+		{"pos": [44, 0, 20],   "kinds": ["slime"],                   "max": 5, "spread": 14.0, "respawn": 6.0, "elite_chance": 0.08},
+		{"pos": [-44, 0, 20],  "kinds": ["wolf"],                    "max": 4, "spread": 16.0, "respawn": 7.0, "elite_chance": 0.12},
+		{"pos": [45, 0, -28],  "kinds": ["mage", "archer"],          "max": 4, "spread": 14.0, "respawn": 8.0, "elite_chance": 0.12},
+		{"pos": [86, 0, 28],   "kinds": ["slime", "wisp"],           "max": 5, "spread": 18.0, "respawn": 7.0, "elite_chance": 0.14},
+		{"pos": [-82, 0, 38],  "kinds": ["wolf", "archer"],          "max": 5, "spread": 18.0, "respawn": 7.0, "elite_chance": 0.16},
+		{"pos": [82, 0, -76],  "kinds": ["mage", "wisp"],            "max": 5, "spread": 20.0, "respawn": 8.0, "elite_chance": 0.2},
+		{"pos": [-40, 0, -55], "kinds": ["wolf", "wisp", "archer"],  "max": 5, "spread": 20.0, "respawn": 8.0, "elite_chance": 0.22},
+		{"pos": [40, 0, -100], "kinds": ["skyseraph"],              "max": 5, "spread": 30.0, "respawn": 8.0, "elite_chance": 0.0},
+		{"pos": [-95, 0, -70], "kinds": ["skyseraph"],              "max": 4, "spread": 28.0, "respawn": 9.0, "elite_chance": 0.0},
+		{"pos": [-120, 0, 40], "kinds": ["orbweaver", "lanewright", "veilcaller", "spiralmancer"], "max": 6, "spread": 30.0, "respawn": 9.0, "elite_chance": 0.0},
+		{"pos": [110, 0, 60],  "kinds": ["orbdrifter", "starcantor", "spiralmancer"], "max": 5, "spread": 28.0, "respawn": 9.0, "elite_chance": 0.0}
+	]
+}

@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Star Glory MMO Server"
+run/main_scene="res://main/Main.tscn"
+config/features=PackedStringArray("4.6")
+boot_splash/show_image=false
+
+[autoload]
+
+GameData="*res://shared/GameData.gd"
+Accounts="*res://net/AccountDB.gd"
+Net="*res://net/ServerNetwork.gd"
+
+[physics]
+
+common/physics_ticks_per_second=30
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bld_missile"]
+
+[ext_resource type="Script" path="res://scenes/world/buildings/turret/Missile.gd" id="1"]
+
+[node name="Missile" type="Node3D"]
+script = ExtResource("1")

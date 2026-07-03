@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dayx77xxdcf3i"]
+
+[ext_resource type="Script" uid="uid://bk2s0l0w4m7ei" path="res://scripts/skills/BlinkSkill.gd" id="1"]
+
+[node name="BlinkSkill" type="Node3D" unique_id=68170476]
+script = ExtResource("1")

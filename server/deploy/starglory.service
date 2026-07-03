@@ -1,0 +1,24 @@
+[Unit]
+Description=Star Glory MMO Server (Godot headless)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/stargloryserver
+ExecStart=/usr/local/bin/godot --headless --path /home/ubuntu/stargloryserver
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
+# 参考用。deploy_server.py --setup-service 会自动生成并安装等价单元到
+# /etc/systemd/system/starglory.service（无需手动复制）。
+# 手动安装：
+#   sudo cp starglory.service /etc/systemd/system/
+#   sudo systemctl daemon-reload && sudo systemctl enable --now starglory
+# 常用命令：
+#   systemctl status starglory          查看状态
+#   journalctl -u starglory -f          实时日志
+#   sudo systemctl restart starglory    重启

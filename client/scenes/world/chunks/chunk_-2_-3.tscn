@@ -1,0 +1,44 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewbii"]
+albedo_color = Color(0.12, 0.18, 0.25, 1)
+roughness = 0.68
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e4l1s"]
+size = Vector2(64, 64)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vw2tl"]
+size = Vector3(64, 0.18, 64)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65yav"]
+albedo_color = Color(0.16, 0.36, 0.25, 1)
+roughness = 0.68
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0r76m"]
+size = Vector2(9.168525, 9.168525)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_f2swi"]
+size = Vector2(11.490576, 11.490576)
+
+[node name="Chunk_-2_-3" type="Node3D" unique_id=1799541316]
+
+[node name="GroundTile" type="MeshInstance3D" parent="." unique_id=820906212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 32)
+material_override = SubResource("StandardMaterial3D_ewbii")
+mesh = SubResource("PlaneMesh_e4l1s")
+
+[node name="GroundCollision" type="StaticBody3D" parent="." unique_id=2132816981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -0.09, 32)
+
+[node name="@CollisionShape3D@1056" type="CollisionShape3D" parent="GroundCollision" unique_id=628746273]
+shape = SubResource("BoxShape3D_vw2tl")
+
+[node name="@MeshInstance3D@24" type="MeshInstance3D" parent="." unique_id=1604560979]
+transform = Transform3D(-0.79067236, 0, 0.61223954, 0, 1, 0, -0.61223954, 0, -0.79067236, 18.34169, 0.02, 52.72412)
+material_override = SubResource("StandardMaterial3D_65yav")
+mesh = SubResource("PlaneMesh_0r76m")
+
+[node name="@MeshInstance3D@51" type="MeshInstance3D" parent="." unique_id=2142426241]
+transform = Transform3D(-0.6433124, 0, 0.7656038, 0, 1, 0, -0.7656038, 0, -0.6433124, 19.407944, 0.02, 51.54474)
+material_override = SubResource("StandardMaterial3D_65yav")
+mesh = SubResource("PlaneMesh_f2swi")

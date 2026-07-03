@@ -1,0 +1,18 @@
+{
+	"_comment": "网络协议常量（单一数据源），客户端与服务器都加载。RPC 方法名直接写在两端脚本里并在 README 列明；此处只放配置常量。改动 protocol_version 时两端不一致会被服务器拒绝登录。",
+	"protocol_version": 31,
+	"default_host": "127.0.0.1",
+	"default_port": 9000,
+	"max_players": 64,
+
+	"player_state_hz": 30,
+	"monster_snapshot_hz": 20,
+
+	"aoi_radius": 90.0,
+	"aoi_hysteresis": 12.0,
+
+	"username_min": 2,
+	"username_max": 16,
+	"password_min": 3,
+	"password_max": 32
+}

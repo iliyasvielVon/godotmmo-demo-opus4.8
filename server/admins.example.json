@@ -1,0 +1,5 @@
+{
+	"_comment": "管理员名单示例。把本文件复制到服务器 data_dir 下并改名为 admins.json（默认 data_dir = user://data，Win: %APPDATA%/Godot/app_userdata/Star Glory MMO Server/data）。键=账号用户名（不区分大小写），值=管理员等级：1=仅自身，2=+抹杀/重置怪物，3=+怪物强度/掉落率。改完重启服务器生效。",
+	"gm": 3,
+	"helper": 1
+}

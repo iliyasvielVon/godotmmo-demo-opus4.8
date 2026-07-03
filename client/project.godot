@@ -1,0 +1,63 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Star Glory - Godot 4.6.2 Prototype"
+run/main_scene="res://scenes/Menu.tscn"
+config/auto_accept_quit=false
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*res://shared/GameData.gd"
+SaveSystem="*res://scripts/SaveSystem.gd"
+Net="*res://scripts/net/NetworkClient.gd"
+AdService="*res://scripts/systems/AdService.gd"
+Audio="*res://scripts/systems/AudioManager.gd"
+TapTap="*res://scripts/systems/TapTapService.gd"
+
+[dirichlet]
+
+ad/media_id="1102804"
+ad/media_name="闯个关"
+ad/media_key="WX3kyMbALUYJPKHJ5bvn1jLsXOqO5Rum8ONeBMcL4ULND88J8nuNK4ZsjVbUw10X"
+ad/reward_space_id="1056796"
+ad/reward_name="复活"
+ad/extra_info="revive"
+ad/user_id=""
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/DirichletAd/plugin.cfg", "res://addons/GodotTapTapSDK/plugin.cfg")
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=2
+environment/defaults/default_clear_color=Color(0.045, 0.055, 0.09, 1)
+
+[taptap]
+
+ad/media_id="1102804"
+ad/media_name="闯个关"
+ad/media_key="WX3kyMbALUYJPKHJ5bvn1jLsXOqO5Rum8ONeBMcL4ULND88J8nuNK4ZsjVbUw10X"
+ad/reward_space_id="1056796"
+ad/reward_name="复活"
+ad/extra_info="revive"
+ad/user_id=""

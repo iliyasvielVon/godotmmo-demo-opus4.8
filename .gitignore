@@ -1,0 +1,41 @@
+# Godot caches and imported artifacts
+**/.godot/
+**/.import/
+
+# Android/desktop export outputs
+client/android/build/
+client/*.apk
+client/*.apk.idsig
+client/*.exe
+client/*.console.exe
+client/*.pck
+client/*.txt
+
+# Local signing keys and saves
+client/*.jks
+client/*.keystore
+client/starglory_save.json
+client/android/**/starglory_save.json*
+
+# Server local config and runtime data
+server/server.cfg
+server/data/
+server/user/
+
+# Tool caches
+tools/__pycache__/
+**/__pycache__/
+
+# Large local reference assets outside the Godot projects
+*.mp4
+*.7z
+*.zip
+debug.png
+1.jpg
+2.jpg
+3.jpg
+4.png
+characterself/
+makehuman/
+Unity日漫角色Riko 带动作换装_爱给网_aigei_com/
+可爱女生高质量全套动作包 KAWAII ANIMATIONS_爱给网_aigei_com (1)/

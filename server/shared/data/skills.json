@@ -1,0 +1,14 @@
+{
+	"_comment": "技能元数据（单一数据源）。来源：client/scripts/systems/SkillManager.gd META/ORDER/常量。",
+	"max_level": 5,
+	"dmg_per_level": 0.18,
+	"order": ["star_slash", "fireball", "frost_ring", "blink", "meteor", "fire_rain"],
+	"meta": {
+		"star_slash": {"name": "星斩",   "key": "1", "cooldown": 0.35, "mp": 0,  "desc": "近身连击斩（三段）",        "icon": "✦"},
+		"fireball":   {"name": "焰弹",   "key": "2", "cooldown": 2.4,  "mp": 13, "desc": "自动索敌发射；升阶后命中爆炸", "icon": "●"},
+		"frost_ring": {"name": "霜环",   "key": "3", "cooldown": 5.5,  "mp": 24, "desc": "范围冰冻减速",            "icon": "❄"},
+		"blink":      {"name": "闪现",   "key": "4", "cooldown": 4.2,  "mp": 10, "desc": "向准星方向位移",          "icon": "◆"},
+		"meteor":     {"name": "天星",   "key": "5", "cooldown": 12.0, "mp": 42, "desc": "升空召唤陨石坠落",        "icon": "☄"},
+		"fire_rain":  {"name": "火焰雨", "key": "6", "cooldown": 10.5, "mp": 38, "desc": "升空锁定区域，持续火伤",   "icon": "🔥"}
+	}
+}

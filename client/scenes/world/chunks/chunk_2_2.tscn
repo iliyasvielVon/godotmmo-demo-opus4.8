@@ -1,0 +1,57 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewbii"]
+albedo_color = Color(0.12, 0.18, 0.25, 1)
+roughness = 0.68
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wr3mp"]
+size = Vector2(64, 64)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sx3wh"]
+size = Vector3(64, 0.18, 64)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65yav"]
+albedo_color = Color(0.16, 0.36, 0.25, 1)
+roughness = 0.68
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eukg4"]
+size = Vector2(10.08588, 10.08588)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdr33"]
+albedo_color = Color(0.36, 0.39, 0.46, 1)
+roughness = 0.68
+
+[sub_resource type="BoxMesh" id="BoxMesh_b36ms"]
+size = Vector3(1.6839142, 0.47809505, 1.9332883)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1je4x"]
+size = Vector3(1.6839142, 0.47809505, 1.9332883)
+
+[node name="Chunk_2_2" type="Node3D" unique_id=1003605946]
+
+[node name="GroundTile" type="MeshInstance3D" parent="." unique_id=5823136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 32)
+material_override = SubResource("StandardMaterial3D_ewbii")
+mesh = SubResource("PlaneMesh_wr3mp")
+
+[node name="GroundCollision" type="StaticBody3D" parent="." unique_id=1222485599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -0.09, 32)
+
+[node name="@CollisionShape3D@1085" type="CollisionShape3D" parent="GroundCollision" unique_id=1887002730]
+shape = SubResource("BoxShape3D_sx3wh")
+
+[node name="@MeshInstance3D@25" type="MeshInstance3D" parent="." unique_id=291280903]
+transform = Transform3D(-0.66498244, 0, 0.74685895, 0, 1, 0, -0.74685895, 0, -0.66498244, 14.514374, 0.02, 18.951965)
+material_override = SubResource("StandardMaterial3D_65yav")
+mesh = SubResource("PlaneMesh_eukg4")
+
+[node name="@MeshInstance3D@902" type="MeshInstance3D" parent="." unique_id=1260069326]
+transform = Transform3D(-0.9048738, 0, 0.42567992, 0, 1, 0, -0.42567992, 0, -0.9048738, 4.3887634, 0.37, 2.500061)
+material_override = SubResource("StandardMaterial3D_mdr33")
+mesh = SubResource("BoxMesh_b36ms")
+
+[node name="@StaticBody3D@904" type="StaticBody3D" parent="." unique_id=702748278 groups=["obstacle"]]
+transform = Transform3D(-0.9048738, 0, 0.42567992, 0, 1, 0, -0.42567992, 0, -0.9048738, 4.3887634, 0.37, 2.500061)
+
+[node name="@CollisionShape3D@903" type="CollisionShape3D" parent="@StaticBody3D@904" unique_id=1267235003]
+shape = SubResource("BoxShape3D_1je4x")
